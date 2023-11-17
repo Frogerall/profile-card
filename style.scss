@@ -9,34 +9,45 @@ body {
  display: flex;
  justify-content: center;
  align-items: center;
+ flex-direction: column;
  height: 100vh;
+ width: 100vw;
+ position: relative;
  overflow: hidden;
 }
-.top,
-.bot {
+.main {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ margin: 1rem auto;
+}
+.img-top {
  position: absolute;
- height: 100%;
- z-index: -1;
-}
-.top {
- bottom: -25rem;
- left: 7.5rem;
- transform: rotate(260deg);
+ width: 30rem;
+ transform: rotate(10deg);
+ top: -10rem;
+ left: -18rem;
  @media (min-width: 600px) {
-  top: -30rem;
-  left: -10rem;
-  transform: rotate(0deg);
+  width: 60rem;
+  top: -25rem;
  }
 }
-.bot {
- top: -25rem;
- right: 10rem;
- transform: rotate(190deg);
+.img-bot {
+ position: absolute;
+ width: 30rem;
+ transform: rotate(10deg);
+ bottom: -10rem;
+ transform: translateX(35%);
+
  @media (min-width: 600px) {
+  width: 60rem;
   bottom: -30rem;
-  right: -10rem;
-  transform: rotate(0deg);
  }
+}
+img {
+ width: 100%;
+ height: auto;
+ display: block;
 }
 .container {
  display: flex;
